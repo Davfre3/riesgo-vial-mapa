@@ -1,0 +1,22 @@
+[
+  {
+    "COD_CARRETERA": "PE-1S",
+    "score_rolling_3m_prom": 0.20,
+    "score_rolling_6m_prom": 0.18,
+    "siniestros_rolling_3m_prom": 0.10,
+    "siniestros_rolling_6m_prom": 0.12,
+    "trafico_total_mensual_prom": 500000,
+    "porc_pesados_prom": 0.25,
+    "ultimo_riesgo_conocido": "BAJO"
+  },
+  {
+    "COD_CARRETERA": "PE-22",
+    "score_rolling_3m_prom": 0.32,
+    "score_rolling_6m_prom": 0.28,
+    "siniestros_rolling_3m_prom": 0.18,
+    "siniestros_rolling_6m_prom": 0.20,
+    "trafico_total_mensual_prom": 650000,
+    "porc_pesados_prom": 0.31,
+    "ultimo_riesgo_conocido": "MEDIO"
+  }
+]
