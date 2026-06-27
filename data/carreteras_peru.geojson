@@ -1,35 +1,653 @@
 {
   "type": "FeatureCollection",
+  "name": "geo_trafico_peru_lima",
+  "metadata": {
+    "descripcion": "GeoJSON inicial para proyecto de mapa interactivo de carreteras del Perú y vías/cámaras de Lima.",
+    "uso": "Subir a GitHub dentro de /data/geo_trafico_peru_lima.geojson y cargarlo desde Leaflet con fetch().",
+    "nota": "Coordenadas referenciales para prototipo académico. Para producción, reemplazar o ampliar con datos oficiales MTC/OpenStreetMap.",
+    "sistema_coordenadas": "WGS84 EPSG:4326",
+    "orden_coordenadas_geojson": "[longitud, latitud]"
+  },
   "features": [
     {
       "type": "Feature",
       "properties": {
-        "COD_CARRETERA": "PE-1S",
-        "DEPARTAMENTO": "LIMA",
-        "NOMBRE": "Panamericana Sur - ejemplo"
+        "id": "PE-R001",
+        "nombre": "Panamericana Norte",
+        "tipo": "carretera",
+        "zona": "peru",
+        "departamento": "Lima - La Libertad",
+        "categoria": "nacional",
+        "porcentaje": 68,
+        "estado": "Alto",
+        "modelo": "prediccion_demo",
+        "historico": [
+          {
+            "fecha": "2026-06-24",
+            "porcentaje": 61
+          },
+          {
+            "fecha": "2026-06-25",
+            "porcentaje": 64
+          },
+          {
+            "fecha": "2026-06-26",
+            "porcentaje": 68
+          }
+        ]
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [-77.02, -12.05],
-          [-76.98, -12.10],
-          [-76.95, -12.17]
+          [
+            -77.0428,
+            -12.0464
+          ],
+          [
+            -77.079,
+            -11.95
+          ],
+          [
+            -77.125,
+            -11.8
+          ],
+          [
+            -77.27,
+            -11.3
+          ],
+          [
+            -77.6,
+            -10.3
+          ],
+          [
+            -78.55,
+            -9.5
+          ],
+          [
+            -79.03,
+            -8.11
+          ]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "COD_CARRETERA": "PE-22",
-        "DEPARTAMENTO": "LIMA",
-        "NOMBRE": "Carretera Central - ejemplo"
+        "id": "PE-R002",
+        "nombre": "Panamericana Sur",
+        "tipo": "carretera",
+        "zona": "peru",
+        "departamento": "Lima - Ica",
+        "categoria": "nacional",
+        "porcentaje": 72,
+        "estado": "Alto",
+        "modelo": "prediccion_demo",
+        "historico": [
+          {
+            "fecha": "2026-06-24",
+            "porcentaje": 65
+          },
+          {
+            "fecha": "2026-06-25",
+            "porcentaje": 70
+          },
+          {
+            "fecha": "2026-06-26",
+            "porcentaje": 72
+          }
+        ]
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [-77.02, -12.05],
-          [-76.93, -12.00],
-          [-76.82, -12.02]
+          [
+            -77.0428,
+            -12.0464
+          ],
+          [
+            -76.93,
+            -12.25
+          ],
+          [
+            -76.72,
+            -12.6
+          ],
+          [
+            -76.43,
+            -13.0
+          ],
+          [
+            -76.14,
+            -13.42
+          ],
+          [
+            -75.75,
+            -14.07
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PE-R003",
+        "nombre": "Carretera Central",
+        "tipo": "carretera",
+        "zona": "peru",
+        "departamento": "Lima - Junín",
+        "categoria": "nacional",
+        "porcentaje": 86,
+        "estado": "Muy alto",
+        "modelo": "prediccion_demo",
+        "historico": [
+          {
+            "fecha": "2026-06-24",
+            "porcentaje": 79
+          },
+          {
+            "fecha": "2026-06-25",
+            "porcentaje": 83
+          },
+          {
+            "fecha": "2026-06-26",
+            "porcentaje": 86
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -77.0428,
+            -12.0464
+          ],
+          [
+            -76.78,
+            -11.98
+          ],
+          [
+            -76.5,
+            -11.9
+          ],
+          [
+            -76.25,
+            -11.75
+          ],
+          [
+            -75.7,
+            -11.5
+          ],
+          [
+            -75.2,
+            -12.06
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PE-R004",
+        "nombre": "Vía Interoceánica Sur",
+        "tipo": "carretera",
+        "zona": "peru",
+        "departamento": "Cusco - Madre de Dios",
+        "categoria": "nacional",
+        "porcentaje": 38,
+        "estado": "Medio",
+        "modelo": "prediccion_demo",
+        "historico": [
+          {
+            "fecha": "2026-06-24",
+            "porcentaje": 35
+          },
+          {
+            "fecha": "2026-06-25",
+            "porcentaje": 36
+          },
+          {
+            "fecha": "2026-06-26",
+            "porcentaje": 38
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.9675,
+            -13.5319
+          ],
+          [
+            -71.55,
+            -13.25
+          ],
+          [
+            -70.9,
+            -12.9
+          ],
+          [
+            -70.5,
+            -12.7
+          ],
+          [
+            -69.1833,
+            -12.6
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "LIM-V001",
+        "nombre": "Av. Javier Prado",
+        "tipo": "via_lima",
+        "zona": "lima",
+        "distrito": "San Isidro - La Molina",
+        "categoria": "avenida",
+        "porcentaje": 88,
+        "estado": "Muy alto",
+        "modelo": "prediccion_demo",
+        "historico": [
+          {
+            "fecha": "2026-06-24",
+            "porcentaje": 80
+          },
+          {
+            "fecha": "2026-06-25",
+            "porcentaje": 84
+          },
+          {
+            "fecha": "2026-06-26",
+            "porcentaje": 88
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -77.0502,
+            -12.089
+          ],
+          [
+            -77.035,
+            -12.088
+          ],
+          [
+            -77.02,
+            -12.087
+          ],
+          [
+            -76.999,
+            -12.0865
+          ],
+          [
+            -76.96,
+            -12.078
+          ],
+          [
+            -76.93,
+            -12.07
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "LIM-V002",
+        "nombre": "Av. Arequipa",
+        "tipo": "via_lima",
+        "zona": "lima",
+        "distrito": "Lima - Miraflores",
+        "categoria": "avenida",
+        "porcentaje": 63,
+        "estado": "Alto",
+        "modelo": "prediccion_demo",
+        "historico": [
+          {
+            "fecha": "2026-06-24",
+            "porcentaje": 55
+          },
+          {
+            "fecha": "2026-06-25",
+            "porcentaje": 59
+          },
+          {
+            "fecha": "2026-06-26",
+            "porcentaje": 63
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -77.0357,
+            -12.056
+          ],
+          [
+            -77.0343,
+            -12.07
+          ],
+          [
+            -77.033,
+            -12.085
+          ],
+          [
+            -77.0314,
+            -12.1
+          ],
+          [
+            -77.03,
+            -12.118
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "LIM-V003",
+        "nombre": "Vía Expresa Paseo de la República",
+        "tipo": "via_lima",
+        "zona": "lima",
+        "distrito": "Lima - Miraflores - Barranco",
+        "categoria": "via_expresa",
+        "porcentaje": 77,
+        "estado": "Alto",
+        "modelo": "prediccion_demo",
+        "historico": [
+          {
+            "fecha": "2026-06-24",
+            "porcentaje": 70
+          },
+          {
+            "fecha": "2026-06-25",
+            "porcentaje": 75
+          },
+          {
+            "fecha": "2026-06-26",
+            "porcentaje": 77
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -77.0346,
+            -12.065
+          ],
+          [
+            -77.0308,
+            -12.08
+          ],
+          [
+            -77.026,
+            -12.095
+          ],
+          [
+            -77.0228,
+            -12.11
+          ],
+          [
+            -77.02,
+            -12.13
+          ],
+          [
+            -77.018,
+            -12.145
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "LIM-V004",
+        "nombre": "Av. Brasil",
+        "tipo": "via_lima",
+        "zona": "lima",
+        "distrito": "Lima - Jesús María - Magdalena",
+        "categoria": "avenida",
+        "porcentaje": 49,
+        "estado": "Medio",
+        "modelo": "prediccion_demo",
+        "historico": [
+          {
+            "fecha": "2026-06-24",
+            "porcentaje": 42
+          },
+          {
+            "fecha": "2026-06-25",
+            "porcentaje": 46
+          },
+          {
+            "fecha": "2026-06-26",
+            "porcentaje": 49
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -77.055,
+            -12.06
+          ],
+          [
+            -77.058,
+            -12.075
+          ],
+          [
+            -77.06,
+            -12.09
+          ],
+          [
+            -77.0615,
+            -12.105
+          ],
+          [
+            -77.063,
+            -12.118
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "LIM-V005",
+        "nombre": "Av. La Marina",
+        "tipo": "via_lima",
+        "zona": "lima",
+        "distrito": "Pueblo Libre - San Miguel",
+        "categoria": "avenida",
+        "porcentaje": 58,
+        "estado": "Alto",
+        "modelo": "prediccion_demo",
+        "historico": [
+          {
+            "fecha": "2026-06-24",
+            "porcentaje": 50
+          },
+          {
+            "fecha": "2026-06-25",
+            "porcentaje": 54
+          },
+          {
+            "fecha": "2026-06-26",
+            "porcentaje": 58
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -77.06,
+            -12.08
+          ],
+          [
+            -77.075,
+            -12.0805
+          ],
+          [
+            -77.09,
+            -12.081
+          ],
+          [
+            -77.105,
+            -12.0815
+          ],
+          [
+            -77.12,
+            -12.082
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "LIM-V006",
+        "nombre": "Av. Universitaria",
+        "tipo": "via_lima",
+        "zona": "lima",
+        "distrito": "San Miguel - Los Olivos - Comas",
+        "categoria": "avenida",
+        "porcentaje": 69,
+        "estado": "Alto",
+        "modelo": "prediccion_demo",
+        "historico": [
+          {
+            "fecha": "2026-06-24",
+            "porcentaje": 60
+          },
+          {
+            "fecha": "2026-06-25",
+            "porcentaje": 65
+          },
+          {
+            "fecha": "2026-06-26",
+            "porcentaje": 69
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -77.088,
+            -12.075
+          ],
+          [
+            -77.081,
+            -12.03
+          ],
+          [
+            -77.075,
+            -11.99
+          ],
+          [
+            -77.07,
+            -11.95
+          ],
+          [
+            -77.065,
+            -11.91
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "CAM-001",
+        "nombre": "Cámara Javier Prado - San Isidro",
+        "tipo": "camara",
+        "zona": "lima",
+        "distrito": "San Isidro",
+        "proveedor": "Claro",
+        "url": "https://ejemplo.com/camara-javier-prado",
+        "estado_camara": "activa",
+        "porcentaje": 88,
+        "estado": "Muy alto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.035,
+          -12.088
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "CAM-002",
+        "nombre": "Cámara Vía Expresa - Miraflores",
+        "tipo": "camara",
+        "zona": "lima",
+        "distrito": "Miraflores",
+        "proveedor": "Claro",
+        "url": "https://ejemplo.com/camara-via-expresa",
+        "estado_camara": "activa",
+        "porcentaje": 77,
+        "estado": "Alto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.026,
+          -12.095
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "CAM-003",
+        "nombre": "Cámara Av. Arequipa - Lima",
+        "tipo": "camara",
+        "zona": "lima",
+        "distrito": "Lima",
+        "proveedor": "Claro",
+        "url": "https://ejemplo.com/camara-arequipa",
+        "estado_camara": "activa",
+        "porcentaje": 63,
+        "estado": "Alto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0343,
+          -12.07
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "CAM-004",
+        "nombre": "Cámara Av. La Marina - San Miguel",
+        "tipo": "camara",
+        "zona": "lima",
+        "distrito": "San Miguel",
+        "proveedor": "Claro",
+        "url": "https://ejemplo.com/camara-la-marina",
+        "estado_camara": "activa",
+        "porcentaje": 58,
+        "estado": "Alto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.105,
+          -12.0815
         ]
       }
     }
