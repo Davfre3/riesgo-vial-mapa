@@ -23,7 +23,7 @@ const URLS={
  carreteras:'data/carreteras_peru.geojson',
  riesgo:'data/riesgo_base_carreteras.json',
  modelo:'data/modelo_export.json',
- backend:'https://riesgo-vial-backend-8m8t51b0i-proyectvial.vercel.app/api/tiempo-real'
+ backend:'https://riesgo-vial-backend.vercel.app/api/tiempo-real'
 };
 let map=L.map('map',{preferCanvas:true}).setView([-9.19,-75.0152],6),layer,geo,base=[],live=[],features=[];
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:20,attribution:'© OpenStreetMap © CARTO'}).addTo(map);
