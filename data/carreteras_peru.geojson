@@ -1,0 +1,37 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "COD_CARRETERA": "PE-1S",
+        "DEPARTAMENTO": "LIMA",
+        "NOMBRE": "Panamericana Sur - ejemplo"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-77.02, -12.05],
+          [-76.98, -12.10],
+          [-76.95, -12.17]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "COD_CARRETERA": "PE-22",
+        "DEPARTAMENTO": "LIMA",
+        "NOMBRE": "Carretera Central - ejemplo"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-77.02, -12.05],
+          [-76.93, -12.00],
+          [-76.82, -12.02]
+        ]
+      }
+    }
+  ]
+}
