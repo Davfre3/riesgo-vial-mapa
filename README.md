@@ -1,61 +1,61 @@
 # Riesgo Vial Mapa
 
-Mapa interactivo para GitHub Pages. Muestra carreteras como líneas tipo tráfico y actualiza datos en tiempo real desde el backend de Vercel.
+Mapa interactivo que pinta carreteras por riesgo historico + condiciones actuales de trafico y clima. Consume el backend local en `http://localhost:8080/api/tiempo-real`.
 
-## Estructura
+## Levantar localmente
 
-```text
-index.html
-data/
-  carreteras_peru.geojson
-  riesgo_base_carreteras.json
-  camaras_lima.json
+1. Primero levanta el backend Docker desde el repo `riesgo-vial-backend`:
+
+```powershell
+docker compose up --build
 ```
 
-## Archivos obligatorios
+2. En otra terminal entra al repo del mapa:
+
+```powershell
+cd .\riesgo-vial-mapa
+```
+
+3. Sirve los archivos estaticos en el puerto `5500`.
+
+Si tienes Python instalado:
+
+```powershell
+python -m http.server 5500
+```
+
+Si PowerShell no encuentra Python, usa Node:
+
+```powershell
+npx.cmd serve . -l 5500
+```
+
+4. Abre el mapa:
+
+```text
+http://localhost:5500
+```
+
+## Datos requeridos
 
 ```text
 data/carreteras_peru.geojson
 data/riesgo_base_carreteras.json
+data/modelo_export.json
 ```
 
-`carreteras_peru.geojson` debe contener líneas reales de carreteras con un código compatible:
+El mapa espera que el backend responda en:
 
 ```text
-COD_CARRETERA
-RUTA
-CODIGO
-cod_carretera
-ruta
-codigo
+http://localhost:8080/api/tiempo-real
 ```
 
-`riesgo_base_carreteras.json` debe venir de Gold/Colab y tener `COD_CARRETERA`.
+## Actualizacion por zonas
 
-## Backend en tiempo real
-
-El mapa consulta este endpoint:
+El backend devuelve zonas de tiempo real para evitar una consulta por cada carretera. El mapa asigna cada carretera a la zona cercana, combina:
 
 ```text
-https://riesgo-vial-backend.vercel.app/api/tiempo-real
+35% historico + 65% actual
 ```
 
-Si Vercel te da otra URL, cambia esta línea en `index.html`:
-
-```js
-backendTiempoReal: "https://riesgo-vial-backend.vercel.app/api/tiempo-real"
-```
-
-por tu URL real.
-
-## Activar GitHub Pages
-
-En GitHub:
-
-```text
-Settings → Pages → Deploy from a branch → main → root
-```
-
-## Importante
-
-Los archivos de la carpeta `data/` son de ejemplo. Debes reemplazarlos por tus datos reales exportados desde Databricks/Gold y por un GeoJSON real de carreteras.
+y nunca deja que una condicion actual alta quede por debajo del riesgo actual calculado.
